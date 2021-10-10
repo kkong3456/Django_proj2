@@ -9,7 +9,7 @@ class Dsuser(models.Model):
     register_date=models.DateTimeField(auto_now_add=True,verbose_name='가입일')
 
     def __str__(self):
-        return self.id
+        return self.user_id
 
     class Meta:
         db_table='stagram_dsuser'
