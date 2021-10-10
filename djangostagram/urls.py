@@ -18,6 +18,7 @@ from django.urls import path
 from dsuser.views import index,RegisterView,LoginView
 
 from dsuser.views import RegisterView,index,logout
+from post.views import post_write
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     path('',index),
     path('user/register/',RegisterView.as_view()),
     path('user/login/',LoginView.as_view()),
-    path('user/logout/',logout)
+    path('user/logout/',logout),
+    path('upload/',post_write),
 ]
